@@ -1,0 +1,228 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Tarification - MartinTechSolutions',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Tarification"
+    title="Des offres adaptées à vos besoins"
+    subtitle="Choisissez la solution qui correspond le mieux à votre projet."
+  />
+
+  <Prices
+    title="Nos tarifs pour la création de site web"
+    subtitle="Des solutions adaptées à chaque entreprise"
+    prices={[
+      {
+        title: 'Site Vitrine (WordPress)',
+        subtitle: 'Solution idéale pour une présence en ligne rapide et efficace',
+        price: 900,
+        period: 'paiement unique',
+        items: [
+          { description: 'Site vitrine avec WordPress' },
+          { description: 'Jusqu’à 5 pages optimisées' },
+          { description: 'Design personnalisé' },
+          { description: 'Optimisation SEO de base' },
+        ],
+        callToAction: {
+          text: 'Commander',
+          href: '#',
+        },
+      },
+      {
+        title: 'Site Vitrine Personnalisé',
+        subtitle: 'Un site sur mesure sans méthode de paiement',
+        price: 2000,
+        period: 'paiement unique',
+        items: [
+          { description: 'Développement sur mesure sans CMS' },
+          { description: 'Jusqu’à 10 pages optimisées' },
+          { description: 'Design unique' },
+          { description: 'Optimisation SEO avancée' },
+        ],
+        callToAction: {
+          text: 'Commander',
+          href: '#',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'Populaire',
+      },
+      {
+        title: 'Site 100% Personnalisé',
+        subtitle: 'Solution complète pour entreprise avec paiement en ligne',
+        price: 'Personalisé',
+        period: 'Sur Devis',
+        items: [
+          { description: 'Développement complet sur mesure' },
+          { description: 'Système de paiement en ligne' },
+          { description: 'Fonctionnalités avancées personnalisées' },
+          { description: 'Optimisation SEO premium' },
+        ],
+        callToAction: {
+          text: 'Demander un devis',
+          href: '/contact',
+        },
+      },
+    ]}
+  />
+
+  <Prices
+    title="Abonnements mensuels pour la maintenance"
+    subtitle="Assurez la sécurité et la performance de votre site"
+    prices={[
+      {
+        title: 'Basique',
+        subtitle: 'Idéal pour un usage personnel',
+        price: 29,
+        period: 'par mois',
+        items: [
+          { description: 'Support technique inclus' },
+          { description: 'Hébergement sécurisé' },
+          { description: 'Optimisation SEO de base' },
+          { description: 'Mises à jour régulières' },
+        ],
+        callToAction: {
+          text: 'Sélectionner',
+          href: '#',
+        },
+      },
+      {
+        title: 'Standard',
+        subtitle: 'Parfait pour les petites entreprises',
+        price: 69,
+        period: 'par mois',
+        items: [
+          { description: 'Toutes les fonctionnalités du plan Basique' },
+          { description: 'Optimisation SEO avancée' },
+          { description: 'Personnalisation du design' },
+          { description: 'Rapports de performance mensuels' },
+          { description: 'Assistance prioritaire' },
+        ],
+        callToAction: {
+          text: 'Sélectionner',
+          href: '#',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'Populaire',
+      },
+      {
+        title: 'Premium',
+        subtitle: 'Solution idéale pour les entreprises',
+        price: 199,
+        period: 'par mois',
+        items: [
+          { description: 'Toutes les fonctionnalités du plan Standard' },
+          { description: 'Audit SEO et conseils personnalisés' },
+          { description: 'Développement de fonctionnalités sur mesure' },
+          { description: 'Support client 24/7' },
+        ],
+        callToAction: {
+          text: 'Sélectionner',
+          href: '#',
+        },
+      },
+    ]}
+  />
+  
+  <Features3
+    title="Avantages de nos offres"
+    subtitle="Pourquoi choisir MartinTechSolutions ?"
+    columns={2}
+    items={[
+      {
+        title: 'Tarification transparente',
+        description: 'Des prix affichés clairement, sans frais cachés ni surprises.',
+        icon: 'tabler:flip-vertical',
+      },
+      {
+        title: 'Paiement sécurisé',
+        description: 'Utilisation de passerelles de paiement sécurisées pour garantir vos transactions.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Accès instantané',
+        description: 'Activation immédiate de votre plan après l’abonnement.',
+        icon: 'tabler:accessible',
+      },
+      {
+        title: 'Mises à niveau faciles',
+        description: 'Passez à un plan supérieur à tout moment pour plus de fonctionnalités.',
+        icon: 'tabler:chevrons-up',
+      },
+      {
+        title: 'Support 24/7',
+        description: 'Assistance via chat en direct, e-mail ou téléphone, tous les jours.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+
+  <Steps
+    title="Processus d’abonnement simplifié"
+    tagline="En quelques étapes seulement"
+    isReversed={true}
+    items={[
+      { title: 'Explorez nos offres', icon: 'tabler:number-1' },
+      { title: 'Sélectionnez un plan', icon: 'tabler:number-2' },
+      { title: 'Créez un compte ou connectez-vous', icon: 'tabler:number-3' },
+      { title: 'Vérifiez votre commande', icon: 'tabler:number-4' },
+      { title: 'Entrez vos informations de paiement', icon: 'tabler:number-5' },
+      { title: 'Recevez votre confirmation', icon: 'tabler:number-6' },
+      { title: 'Profitez de nos services', icon: 'tabler:number-7' },
+    ]}
+    image={{
+      src: '~/assets/images/steps-image.png',
+      alt: 'Processus de paiement',
+    }}
+  />
+
+  <FAQs
+    title="Questions fréquentes sur nos tarifs"
+    subtitle="Vous avez des questions ? Nous avons les réponses."
+    columns={1}
+    items={[
+      {
+        title: 'L’assistance client est-elle incluse ?',
+        description: 'Oui, tous nos plans incluent un support client dédié pour répondre à vos besoins.',
+      },
+      {
+        title: 'Proposez-vous une période d’essai ?',
+        description: 'Nous ne proposons pas de période d’essai, mais vous pouvez explorer notre démo avant de souscrire.',
+      },
+      {
+        title: 'Puis-je changer de plan à tout moment ?',
+        description: 'Bien sûr ! Vous pouvez passer à un plan supérieur ou inférieur selon vos besoins.',
+      },
+      {
+        title: 'Quels sont les moyens de paiement acceptés ?',
+        description: 'Nous acceptons les cartes de crédit et divers moyens de paiement en ligne sécurisés.',
+      },
+      {
+        title: 'Y a-t-il des frais cachés ?',
+        description: 'Non, tous les frais sont clairement indiqués lors de la souscription.',
+      },
+    ]}
+  />
+
+  <CallToAction
+    title="Besoin d'un site performant ?"
+    subtitle="Choisissez la meilleure solution pour votre activité et bénéficiez d'un accompagnement professionnel."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Demander un devis',
+        href: '/contact',
+      },
+    ]}
+  />
+</Layout>

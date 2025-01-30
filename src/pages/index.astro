@@ -1,0 +1,164 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+// import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'MartinTechSolutions - Développeur Freelance JavaScript & SEO à Lyon',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Demander un devis',
+        href: '/contact',
+        icon: 'tabler:message',
+      },
+      { text: 'En savoir plus', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/office-pc-with-code-fading.png', alt: 'MartinTechSolutions Hero' }}
+  >
+    <Fragment slot="title">
+      Création de sites web modernes et performants à <span class="text-accent dark:text-white highlight">Lyon</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        MartinTechSolutions vous accompagne dans la conception et l'optimisation de votre site web
+        pour améliorer votre visibilité en ligne et votre référencement SEO.</span>
+    </Fragment>
+  </Hero>
+
+  <Note />
+
+  <Features
+    id="features"
+    tagline="Nos services"
+    title="Des solutions digitales adaptées à vos besoins"
+    subtitle="MartinTechSolutions vous propose des services de développement web et d’optimisation SEO pour garantir un site performant."
+    items={[
+      {
+        title: 'Développement sur mesure',
+        description: 'Sites vitrines, e-commerce et applications web en JavaScript et React.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Optimisation SEO',
+        description: 'Stratégie de référencement naturel pour booster votre visibilité sur Google.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Maintenance & support',
+        description: 'Suivi technique et mises à jour régulières pour garantir la pérennité de votre site.',
+        icon: 'tabler:settings',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline="Pourquoi choisir MartinTechSolutions ?"
+    title="Expertise et accompagnement personnalisé"
+    items={[
+      {
+        title: 'Approche centrée sur l’utilisateur',
+        description: 'Des sites pensés pour l’expérience utilisateur et l’optimisation mobile.',
+      },
+      {
+        title: 'Performance et rapidité',
+        description: 'Un site rapide et optimisé pour un meilleur référencement.',
+      },
+      {
+        title: 'Technologies modernes',
+        description: 'Développement avec React.js, Astro et Tailwind CSS.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/programming-languages-logo.png',
+      alt: 'logos-de-technologies-de-programmation',
+    }}
+  />
+
+  <Steps
+    title="Comment se déroule notre collaboration ?"
+    items={[
+      {
+        title: 'Étape 1 : Définition des besoins',
+        description: 'Analyse de votre projet et identification des fonctionnalités nécessaires.',
+        icon: 'tabler:clipboard',
+      },
+      {
+        title: 'Étape 2 : Développement',
+        description: 'Mise en place des technologies adaptées pour un site performant et moderne.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Étape 3 : Optimisation SEO',
+        description: 'Application des meilleures pratiques SEO pour un bon référencement.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Étape 4 : Livraison et suivi',
+        description: 'Mise en ligne du site et accompagnement pour assurer son évolution.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+
+  <BlogLatestPosts
+    title="Nos derniers articles"
+    information="Découvrez nos conseils en SEO, développement web et stratégie digitale."
+  />
+
+  <FAQs
+    title="Questions fréquentes"
+    subtitle="Réponses aux questions les plus posées sur nos services."
+    items={[
+      {
+        title: 'Quels sont vos délais de livraison ?',
+        description: 'Tout dépend du projet, mais en moyenne un site vitrine est livré sous 3 à 5 semaines.',
+      },
+      {
+        title: 'Pourquoi le SEO est-il important ?',
+        description: 'Le SEO permet à votre site d’apparaître en tête des résultats Google et d’attirer plus de visiteurs.',
+      },
+    ]}
+  />
+
+  <Stats
+    stats={[
+      { title: 'Projets réalisés', amount: '50+' },
+      { title: 'Clients satisfaits', amount: '98%' },
+      { title: 'Optimisation SEO', amount: '100%' },
+      { title: 'Temps de chargement moyen', amount: '1.2s' },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Demander un devis',
+        href: '/contact',
+        icon: 'tabler:message',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Améliorez votre présence en ligne dès aujourd’hui
+    </Fragment>
+  </CallToAction>
+</Layout>

@@ -1,0 +1,216 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'À propos de moi',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="À propos de moi"
+    image={{
+      src: '~/assets/images/image-de-keenan-martin-et-logo.png',
+      alt: 'Image de développement web',
+    }}
+  >
+    <Fragment slot="title">
+      Création de sites web modernes et performants <br />
+      <span class="text-accent dark:text-white highlight"> avec JavaScript et React</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Développeur passionné basé à Caluire-et-Cuire, je crée des solutions web sur mesure 
+      pour répondre aux besoins des entreprises et entrepreneurs. Mon objectif : allier performance, 
+      design et expérience utilisateur optimale.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Quelques chiffres"
+    stats={[
+      { title: 'Années d\'expérience', amount: '3' },
+      { title: 'Projets réalisés', amount: '15+' },
+      { title: 'Clients satisfaits', amount: '10+' },
+      { title: 'Technologies utilisées', amount: 'React, JavaScript, Tailwind CSS' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Services proposés"
+    subtitle="Je développe des solutions digitales adaptées à vos besoins, du site vitrine au site e-commerce."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Développement de sites web',
+        description:
+          'Création de sites performants et responsives avec JavaScript et React.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Optimisation SEO',
+        description:
+          'Amélioration de la visibilité de votre site sur Google avec des techniques avancées.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Refonte et amélioration',
+        description:
+          'Mise à jour et optimisation de sites existants pour de meilleures performances.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Site vitrine',
+        description:
+          'Présentez votre entreprise avec un site professionnel et épuré.',
+        icon: 'tabler:layout',
+      },
+      {
+        title: 'E-commerce',
+        description:
+          'Mise en place de boutiques en ligne performantes avec intégration de paiement sécurisé.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Blog',
+        description:
+          'Création de blogs dynamiques et faciles à gérer.',
+        icon: 'tabler:book',
+      },
+      {
+        title: 'UX/UI Design',
+        description:
+          'Optimisation de l’expérience utilisateur pour une navigation fluide.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Maintenance & support',
+        description:
+          'Assistance technique et mises à jour pour assurer le bon fonctionnement de votre site.',
+        icon: 'tabler:tool',
+      },
+      {
+        title: 'Automatisation',
+        description:
+          'Développement d’outils pour automatiser les tâches et optimiser la productivité.',
+        icon: 'tabler:cpu',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Développement web en action',
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Pourquoi travailler avec moi ?"
+    subtitle="Un accompagnement personnalisé pour chaque projet, de l'idée à la mise en ligne."
+    items={[
+      {
+        title: 'Expertise technique',
+        description:
+          'Maîtrise des dernières technologies web pour créer des sites modernes et performants.',
+      },
+      {
+        title: 'Approche orientée client',
+        description:
+          'Chaque projet est conçu sur mesure selon vos besoins et vos objectifs.',
+      },
+      {
+        title: 'Support et suivi',
+        description:
+          'Je vous accompagne même après la mise en ligne pour garantir le bon fonctionnement de votre site.',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Mes réalisations"
+    subtitle="Découvrez quelques-uns de mes projets et collaborations."
+    isReversed={true}
+    callToAction={{
+      text: 'Voir mes réalisations',
+      href: '/blog',
+    }}
+    items={[
+      {
+        title: 'Site d\'entreprise',
+        description: 'Création de sites vitrines pour présenter des services et attirer des clients.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Boutique en ligne',
+        description:
+          'Développement de solutions e-commerce performantes et optimisées.',
+        icon: 'tabler:shopping-bag',
+      },
+      {
+        title: 'Blog & contenus dynamiques',
+        description:
+          'Mise en place de plateformes de contenu optimisées pour le SEO.',
+        icon: 'tabler:news',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Basé à Caluire-et-Cuire"
+    tagline="Disponible partout en France"
+    columns={1}
+    items={[
+      {
+        title: 'Localisation',
+        description: 'Je travaille à distance mais je peux aussi me déplacer pour des rendez-vous professionnels.',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Contactez-moi"
+    tagline="Parlons de votre projet !"
+    columns={2}
+    items={[
+      {
+        title: 'Par email',
+        description:
+          'Envoyez-moi un message et discutons de vos besoins en développement web.',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Par téléphone',
+        description:
+          'Besoin d\'une consultation rapide ? Appelez-moi directement.',
+        icon: 'tabler:phone',
+      },
+    ]}
+  />
+</Layout>

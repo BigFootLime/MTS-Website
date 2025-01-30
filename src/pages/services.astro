@@ -1,0 +1,150 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Services - MartinTechSolutions',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Nos Services"
+    title="Boostez votre présence en ligne avec nos solutions digitales"
+    subtitle="Découvrez nos services de développement web et d’optimisation SEO adaptés à votre entreprise."
+    actions={[{ variant: 'primary', text: 'Commencez dès maintenant', href: '/contact' }]}
+    image={{
+      src: '~/assets/images/services-hero.png',
+      alt: 'MartinTechSolutions Services Image',
+    }}
+  />
+
+  <Features2
+    title="Nos domaines d'expertise"
+    subtitle="Des solutions adaptées à vos besoins spécifiques pour un site web performant."
+    columns={3}
+    items={[
+      {
+        title: 'Développement Web',
+        description:
+          'Création de sites vitrines, e-commerce et applications web modernes et performants en JavaScript et React.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'SEO & Référencement',
+        description:
+          'Optimisation de votre site pour améliorer son classement sur Google et attirer plus de visiteurs.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Maintenance & Support',
+        description: `Assurez la stabilité et la sécurité de votre site avec nos services de maintenance et mises à jour régulières.`,
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Branding & Identité Visuelle',
+        description:
+          'Création d’une identité visuelle forte avec logos et charte graphique pour un impact maximal.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Hébergement & Sécurité',
+        description:
+          'Hébergement sécurisé et solutions robustes pour protéger votre site contre les menaces en ligne.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Stratégie Digitale',
+        description:
+          'Conseils et stratégies pour maximiser votre impact en ligne et améliorer votre conversion.',
+        icon: 'tabler:chart-line',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Solutions sur mesure',
+        description:
+          'Nous créons des solutions digitales adaptées à vos besoins et à votre audience.',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Performance et Sécurité',
+        description:
+          'Des sites rapides, optimisés et sécurisés pour garantir la meilleure expérience utilisateur.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Visibilité et Croissance',
+        description:
+          'Une approche SEO efficace pour positionner votre site en haut des résultats de recherche.',
+        icon: 'tabler:chart-line',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/features-image.png',
+      alt: 'MartinTechSolutions Features Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Pourquoi nous choisir ?</h3>
+    </Fragment>
+  </Content>
+
+  <Testimonials
+    title="Témoignages de nos clients"
+    testimonials={[
+      {
+        testimonial: `Grâce à MartinTechSolutions, notre site est non seulement magnifique mais aussi performant sur Google. Une équipe réactive et professionnelle !`,
+        name: 'Claire Dupont',
+        job: 'Responsable Marketing',
+        image: {
+          src: '~/assets/images/client1.png',
+          alt: 'Claire Dupont',
+        },
+      },
+      {
+        testimonial: `Un travail remarquable sur notre boutique en ligne, avec un SEO efficace qui a boosté nos ventes.`,
+        name: 'Thomas Leroy',
+        job: 'E-commerçant',
+        image: {
+          src: '~/assets/images/client2.png',
+          alt: 'Thomas Leroy',
+        },
+      },
+      {
+        testimonial: `Un accompagnement de qualité, des conseils avisés et un site optimisé pour notre activité.`,
+        name: 'Sophie Martin',
+        job: 'Entrepreneuse',
+        image: {
+          src: '~/assets/images/client3.png',
+          alt: 'Sophie Martin',
+        },
+      },
+    ]}
+    callToAction={{
+      text: 'Voir plus d’avis',
+      href: '/testimonials',
+      icon: 'tabler:chevron-right',
+    }}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactez-nous',
+        href: '/contact',
+      },
+    ]}
+    title="Prêt à booster votre activité en ligne ?"
+    subtitle="Parlons de votre projet et construisons ensemble une solution digitale sur mesure."
+  />
+</Layout>

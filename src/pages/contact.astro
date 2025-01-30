@@ -1,0 +1,79 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact - MartinTechSolutions',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Contact" title="Entrons en contact !" />
+
+  <ContactUs
+    id="form"
+    title="Envoyez-nous un message !"
+    subtitle="Pour des réponses plus rapides, consultez notre section FAQ. Si vous ne trouvez pas la réponse à votre question, notre équipe est à votre disposition."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Nom',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    disclaimer={{
+      label:
+        'En soumettant ce formulaire, vous acceptez la collecte de vos informations personnelles pour traiter votre demande.',
+    }}
+    description="Notre équipe vous répond généralement sous 24 heures ouvrées."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Nous sommes là pour vous aider !"
+    items={[
+      {
+        title: 'Support général',
+        description: `Contactez-nous pour toute question sur la gestion de votre compte, la navigation sur le site, les paiements ou tout autre sujet général.`,
+      },
+      {
+        title: 'Contact commercial',
+        description:
+          'Discutez avec nous pour des questions liées aux achats, aux options de personnalisation, aux licences commerciales ou aux demandes spécifiques de site web.',
+      },
+      {
+        title: 'Support technique',
+        description:
+          'Nous vous aidons avec l’installation de votre site, les problèmes d’édition, les compatibilités avec d’autres outils et toute difficulté technique.',
+      },
+      {
+        title: 'Téléphone',
+        description: '+33 6 12 34 56 78',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'contact@martintechsolutions.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Localisation',
+        description: 'Caluire-et-Cuire, Lyon, France',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>
