@@ -13,4 +13,5 @@ FROM webdevops/nginx:alpine
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # Copie les fichiers statiques dans /app/dist
-COPY --from=build /app/dist /app/dist
+COPY --from=build /app/dist /var/www/html
+
